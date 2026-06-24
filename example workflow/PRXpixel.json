@@ -1,0 +1,181 @@
+{
+  "id": "c0198ff2-de15-4d7f-8468-6932a1083199",
+  "revision": 0,
+  "last_node_id": 16,
+  "last_link_id": 15,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "FL_PRXPixel_ModelLoader",
+      "pos": [
+        448.26993096923775,
+        387.39629833774563
+      ],
+      "size": [
+        308.953125,
+        154
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "pipeline",
+          "type": "PRXPIXEL_PIPELINE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "filliptm/ComfyUI-FL-PRXPixel",
+        "ver": "1725db5c2d994abb226763bec7d432c5840da56c",
+        "Node name for S&R": "FL_PRXPixel_ModelLoader"
+      },
+      "widgets_values": [
+        "Photoroom/prxpixel-t2i",
+        "cuda",
+        "bfloat16",
+        false,
+        false
+      ],
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": [
+        1246.5986296754745,
+        387.2863730600991
+      ],
+      "size": [
+        572.0301472109345,
+        563.9375599832847
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.24.0",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "FL_PRXPixel_Generate",
+      "pos": [
+        798.0815961073846,
+        389.2075293878867
+      ],
+      "size": [
+        392.4376692994722,
+        718
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "PRXPIXEL_PIPELINE",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "patch_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "effective_patch_tokens",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "patch_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "filliptm/ComfyUI-FL-PRXPixel",
+        "ver": "1725db5c2d994abb226763bec7d432c5840da56c",
+        "Node name for S&R": "FL_PRXPixel_Generate"
+      },
+      "widgets_values": [
+        "2D flat vector image of an anime girl holding a magical staff that is manipulating the fabric of time",
+        "",
+        1024,
+        1024,
+        28,
+        5,
+        731799939721757,
+        "randomize",
+        1,
+        true,
+        1,
+        true,
+        false,
+        64,
+        64
+      ],
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    }
+  ],
+  "links": [
+    [
+      14,
+      12,
+      0,
+      16,
+      0,
+      "PRXPIXEL_PIPELINE"
+    ],
+    [
+      15,
+      16,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1918176537727243,
+      "offset": [
+        -157.81394323154043,
+        -182.70040541272874
+      ]
+    },
+    "frontendVersion": "1.45.15",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

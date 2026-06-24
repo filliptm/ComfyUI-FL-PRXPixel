@@ -6,6 +6,8 @@ Text-to-image custom nodes for ComfyUI powered by Photoroom's PRXPixel model.
 [![PRXPixel Space](https://img.shields.io/badge/Hugging%20Face-Space-blue)](https://huggingface.co/spaces/Photoroom/PRX-Pixel)
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-green)](https://www.comfy.org/)
 
+![FL PRXPixel workflow preview](assets/prxpixel-workflow.png)
+
 PRXPixel is a pixel-space diffusion model. It generates RGB images directly, without a VAE decode step, and this node pack exposes the model as a simple ComfyUI text-to-image workflow.
 
 ## Features
@@ -43,6 +45,14 @@ python -m pip install -r requirements.txt
 ```
 
 Restart ComfyUI after installation.
+
+## Example Workflow
+
+An example ComfyUI workflow is included at:
+
+```text
+example workflow/PRXpixel.json
+```
 
 ## Quick Start
 
