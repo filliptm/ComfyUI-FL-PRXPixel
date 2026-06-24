@@ -1,0 +1,8 @@
+tests/
+.github/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.psd
+*.tmp
+*.log

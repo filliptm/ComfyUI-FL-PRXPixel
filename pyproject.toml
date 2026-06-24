@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ComfyUI-FL-PRXPixel"
+version = "0.1.0"
+description = "Photoroom PRXPixel text-to-image nodes for ComfyUI with live previews and patch-grid controls"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = [
+    "transformers>=4.57",
+    "accelerate",
+    "safetensors",
+    "huggingface_hub",
+    "diffusers @ https://huggingface.co/spaces/Photoroom/PRX-Pixel/resolve/main/diffusers-0.39.0.dev0-py3-none-any.whl",
+]
+
+[project.urls]
+Repository = "https://github.com/filliptm/ComfyUI-FL-PRXPixel"
+"Bug Tracker" = "https://github.com/filliptm/ComfyUI-FL-PRXPixel/issues"
+
+[tool.comfy]
+PublisherId = "machinedelusions"
+DisplayName = "ComfyUI-FL-PRXPixel"
+Icon = "https://avatars.githubusercontent.com/u/55672949"
